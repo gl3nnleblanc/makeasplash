@@ -4,7 +4,7 @@
   "description": "Make a splash!",
   "main": "index.js",
   "scripts": {
-    "dev": "tsc && node ./www"
+    "dev": "cp -r ./src/views ./build/ && tsc && node ./www"
   },
   "author": "G. S. LeBlanc",
   "license": "MIT",
@@ -15,5 +15,8 @@
     "sequelize": "^6.3.3",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "pug": "^3.0.0"
   }
 }

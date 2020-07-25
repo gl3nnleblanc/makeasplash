@@ -3,10 +3,10 @@ import path from 'path'
 
 const app = express();
 app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
 
+const indexRouter = require('./routes/index.js')
+app.use('/', indexRouter);
 
-app.get('/', (req, res) => {
-  res.send("hey");
-});
 
 module.exports = app;
