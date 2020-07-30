@@ -9,15 +9,18 @@
   "author": "G. S. LeBlanc",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "sequelize": "^6.3.3",
-    "pug": "^3.0.0"
+    "pug": "^3.0.0",
+    "sequelize": "^6.3.3"
   },
   "devDependencies": {
-    "jasmine-node": "^3.0.0",
-    "typescript": "^3.9.7",
-    "ts-node": "^8.10.2",
     "@types/express": "^4.17.7",
-    "@types/node": "^14.0.26"
+    "@types/node": "^14.0.26",
+    "jasmine-node": "^3.0.0",
+    "pg": "^8.3.0",
+    "pg-hstore": "^2.3.3",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
   }
 }
