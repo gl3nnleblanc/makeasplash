@@ -5,5 +5,5 @@
 </p>
 
 <p>
-  To run locally, use <code>$ npm run dev</code> after installing dependencies.
+  To run locally, use <code>$ npm run dev</code> after installing dependencies. Sequelize is configured to connect to a local Postgres database with no password.
 </p>
