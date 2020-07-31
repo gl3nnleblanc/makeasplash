@@ -1,10 +1,7 @@
 import express from 'express'
-import { Sequelize } from 'sequelize'
+import { sequelize } from '../app'
 
 const router: express.Router = express.Router();
-
-// TODO: replace with production db
-const sequelize = new Sequelize("postgres://postgres@localhost:5432")
 
 router.get('/', async (req, res) => {
   try {
