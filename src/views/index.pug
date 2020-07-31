@@ -4,3 +4,13 @@ html
   body
     h1= "PUDL"
     h2= "Make a splash!"
+  table
+    tr
+      th Registered Users
+    if locals.users
+      for user in users
+        tr
+          th user.username
+    else
+      tr
+        th No users exist!
