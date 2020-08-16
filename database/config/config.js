@@ -2,13 +2,16 @@ require('dotenv').config()
 
 module.exports = {
   development: {
-    url: process.env.DEV_DATABASE_URL,
-    password: "postgres",
+    username: "postgres",
+    password: "password",
+    database: "dev",
+// To find ip:
+// docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' pudl-db
+    host: "172.17.0.2",
     dialect: "postgres",
   },
   test: {
-    url: process.env.TEST_DATABASE_URL,
-    password: "postgres",
+    url: "postgres://postgres@localhost:5432",
     dialect: "postgres",
   },
   production: {
