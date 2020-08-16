@@ -11,7 +11,10 @@ router.get('/', async (req, res) => {
     } catch (error) {
       console.error('Unable to connect to the database:', error);
   }
-  var users = User.findAll();
+  var users = User.findAll()
+      .catch(() => {
+          console.error('badbad');
+      });
   res.render('index', users);
 });
 
