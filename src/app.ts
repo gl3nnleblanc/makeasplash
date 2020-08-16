@@ -10,6 +10,6 @@ const indexRouter = require('./routes/index.js')
 app.use('/', indexRouter);
 
 // TODO: replace with production db
-export const sequelize = new Sequelize("postgres://postgres@localhost:5432")
+export const sequelize = new Sequelize("postgres://postgres:password@172.17.0.2:5432")
 
 module.exports = app;

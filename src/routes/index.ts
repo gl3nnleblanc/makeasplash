@@ -6,15 +6,15 @@ const router: express.Router = express.Router();
 
 router.get('/', async (req, res) => {
     sequelize.authenticate()
+        .catch((error) => {
+            console.error('Unable to connect to the database: ', error);
+        })
         .then(() => {
             console.log('Connection has been established successfully.');
-        })
-        .catch((error) => {
-            console.error('Unable to connect to the database:', error);
         });
     var users = User.findAll()
-        .catch(() => {
-            console.error('badbad');
+        .catch((error) => {
+            console.error('Unable to find users: ', error);
         });
     res.render('index', users);
 });
