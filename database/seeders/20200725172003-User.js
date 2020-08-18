@@ -7,14 +7,20 @@ module.exports = {
      *
      * Example:
      */
-     await queryInterface.bulkInsert('People', [
+     await queryInterface.bulkInsert('Users', [
         {
-          name: 'John Doe',
-          email: 'jdoe@com.com
+          id: 1,
+          name: 'XxxJohn_DoexxX',
+          email: 'johndoe@john.doe',
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
-          name: 'Alice Bobson',
-          email: 'abobson@pudl.com
+          id: 2,
+          username: 'Alice_Bobson',
+          password: 'haha xp'
+          createdAt: new Date(),
+          updatedAt: new Date(),
         }], {});
 
   },
@@ -25,6 +31,6 @@ module.exports = {
      *
      * Example:
      */
-     await queryInterface.bulkDelete('People', null, {});
+     await queryInterface.bulkDelete('Users', null, {});
   }
 };

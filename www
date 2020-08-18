@@ -5,4 +5,9 @@ var http = require('http');
 var port = 3000;
 
 var server = http.createServer(app);
-server.listen(port);
+const db = require('./database/models')
+
+db.sequelize.sync()
+    .then( () => {
+        server.listen(port);
+    });

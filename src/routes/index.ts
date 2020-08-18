@@ -12,10 +12,12 @@ router.get('/', async (req, res) => {
         .then(() => {
             console.log('Connection has been established successfully.');
         });
-    var users = User.findAll()
+    var users: Promise<void | User[]> = User.findAll()
         .catch((error) => {
             console.error('Unable to find users: ', error);
         });
+    console.log("SKAAAAAAAAAAAAAAAAAAAAAAAA");
+    console.log(users);
     res.render('index', users);
 });
 

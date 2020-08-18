@@ -8,11 +8,13 @@ module.exports = {
      * Example:
     */
      await queryInterface.bulkInsert('Events', [{
+         id: 1,
          name: 'Sleepover at Josh\'s house',
-         description: "lets play some scrabble!!!",
+         description: 'LEts get shmoozed xd',
          date: new Date(),
          createDate: new Date(),
-         userId: 1,
+         createdAt: new Date(),
+         updatedAt: new Date(),
       }], {});
   },
 
